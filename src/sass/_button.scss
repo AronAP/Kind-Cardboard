@@ -1,0 +1,25 @@
+.button {
+  color: $color-text_light;
+  background-color: $color-main;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  line-height: 22px;
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.header-phone_button {
+  margin-left: 13px;
+}
+
+.form_button {
+  margin-left: 10px;
+}

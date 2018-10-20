@@ -1,21 +1,35 @@
 {
   "name": "kind-cardboard",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Site for the customer from Ufa. The company is engaged in the cardboard industry.",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AronAP/Kind-Cardboard.git"
+  },
   "author": "Artem Prydybailo",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AronAP/Kind-Cardboard/issues"
+  },
+  "homepage": "https://github.com/AronAP/Kind-Cardboard#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-ftp": "^1.1.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "check": "^1.0.0",
+    "g": "^2.0.1",
+    "npm": "^6.4.1",
+    "updates": "^5.1.2"
   }
 }

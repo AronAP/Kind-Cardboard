@@ -1,0 +1,106 @@
+.overlay {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  .popup {
+    position: fixed;
+    width: 750px;
+    top: 0;
+    left: 50%;
+    margin-left: -375px;
+    margin-top: 200px;
+    color: $color-text_light;
+    
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: -31px -16px 0 0;
+      font-size: 30px;
+
+      &:hover {
+        color: darken($color-text_light, 20%);
+        cursor: pointer;  
+      }
+    }
+    
+    &-header {
+      font-family: "Roboto", sans-serif;
+      font-size: 21px;
+      line-height: 70px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: $color-main;
+    }
+    
+    &-form {
+      position: relative;
+      background: $color-text_dark url(../img/modal/modal-bg.jpg) center no-repeat;
+      background-size: cover;
+      z-index: 10;
+      
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.14);
+        z-index: -1;
+      }
+      
+      &_title {
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        line-height: 27px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+
+        span {
+          display: inline-block;
+          font-size: 24px;
+        }
+
+      }
+
+      .feedback-form {
+        text-align: center;
+        padding-bottom: 5px;
+        
+        label {
+          display: block;
+          text-align: center;
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 15px;
+        }
+        
+        .form-input {
+          display: inline-flex;
+          
+          input {
+            border-radius: 5px;
+            border: none;
+            padding-left: 20px;
+            width: 310px;
+          }
+        }
+      }
+      
+      &_subtitle {
+        font-size: 14px;
+        padding-bottom: 50px;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

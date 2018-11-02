@@ -9,17 +9,21 @@
   <title>Добрый Картон</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/roboto.css">
   <link rel="stylesheet" href="css/style.min.css">
   <!--  <link rel="stylesheet" href="../../css/button.css">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/modal.js" defer></script>
 </head>
 
 <body>
 
-<!--  <a href="../../index.html" id="main-btn"></a>-->
+  <!--  <a href="../../index.html" id="main-btn"></a>-->
 
   <header class="header">
     <div class="container">
@@ -108,6 +112,33 @@
   </section>
   <!-- /.main -->
 
+  <!-- ............................................. -->
+  <section class="overlay">
+    <div class="popup">
+      <div class="popup-close">&times;</div>
+      <!-- /.popup-close -->
+      <div class="popup-header">Форма обратной связи</div>
+      <!-- /.popup-header -->
+      <div class="popup-form">
+        <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
+        <!-- /.popup-form_title -->
+        <form action="#" class="feedback-form">
+          <label for="phone">Введите ваш номер телефона:</label>
+          <div class="form-input">
+            <input type="tel" id="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <button class="form_button button">Оставить заявку!</button>
+            <!-- /.form-button button -->
+          </div>
+        </form>
+        <!-- /.feedback-form -->
+        <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
+        <!-- /.popup-form_subtitle -->
+      </div>
+      <!-- /.popup-form -->
+    </div>
+    <!-- /.popup -->
+  </section>
+  <!-- /.overlay -->
 </body>
 
 </html>

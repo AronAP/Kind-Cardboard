@@ -11,6 +11,11 @@
     outline: none;
   }
 
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($color-main, 10%);
+  }
+
   img {
     vertical-align: middle;
   }

@@ -44,7 +44,7 @@ gulp.task('ftp', function () {
       host: 's2.hostiman.ru',
       user: 'artempry',
       pass: 'ib786Yb4Cw',
-      remotePath: '/www/artemprydybailo.h1n.ru/work'
+      remotePath: '/www/artemprydybailo.h1n.ru/KindCardboard'
     }))
     .pipe(gutil.noop());
 });

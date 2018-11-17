@@ -1,11 +1,15 @@
 $(document).ready(function() {
 
   $('.header-phone_button').on('click', function() {
-    $('.overlay').show();
+    $('.modal').show();
   });
   
   $('.popup-close').on('click', function() {
-    $('.overlay').hide();
+    $('.modal').hide();
+  });
+
+  $('.overlay').on('click', function() {
+    $('.modal').hide();
   });
 
 });

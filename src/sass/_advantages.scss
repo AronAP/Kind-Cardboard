@@ -1,0 +1,52 @@
+.advantages {
+  background-color: $color-bg_light;
+  padding: 40px 0 10px;
+
+  &-numbers {
+    margin-bottom: 40px;
+  }
+
+  &-number {
+    text-align: center;
+
+    &_title {
+      font-family: 'Roboto Black', sans-serif;
+      font-size: 36px;
+      color: $color-main;
+
+      sup {
+        font-size: 24px;
+      }
+    }
+
+    &_descrip {
+      font-size: 16px;
+    }
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px 10px;
+    margin-bottom: 30px;
+
+    &_img {
+      flex-basis: 22%;
+      padding-right: 10px;
+    }
+    
+    &_text {
+      flex-basis: 78%;
+
+      .block-text_title {
+        font-family: 'Roboto Black', sans-serif;
+        font-size: 15px;
+      }
+  
+      .block-text_descrip {
+        font-size: 14px;
+      }
+    }
+  }
+}

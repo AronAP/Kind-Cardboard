@@ -172,6 +172,65 @@ input {
   margin-left: 20px;
 }
 
+.advantages {
+  background-color: #f4f4f4;
+  padding: 40px 0 10px;
+}
+
+.advantages-numbers {
+  margin-bottom: 40px;
+}
+
+.advantages-number {
+  text-align: center;
+}
+
+.advantages-number_title {
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 36px;
+  color: #ff9d00;
+}
+
+.advantages-number_title sup {
+  font-size: 24px;
+}
+
+.advantages-number_descrip {
+  font-size: 16px;
+}
+
+.advantages-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 30px 10px;
+  margin-bottom: 30px;
+}
+
+.advantages-block_img {
+  -ms-flex-preferred-size: 22%;
+  flex-basis: 22%;
+  padding-right: 10px;
+}
+
+.advantages-block_text {
+  -ms-flex-preferred-size: 78%;
+  flex-basis: 78%;
+}
+
+.advantages-block_text .block-text_title {
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 15px;
+}
+
+.advantages-block_text .block-text_descrip {
+  font-size: 14px;
+}
+
 .overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);

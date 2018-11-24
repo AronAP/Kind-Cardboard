@@ -1,0 +1,29 @@
+.clients {
+  padding: 40px 0 10px;
+
+  &-company {
+
+    &_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      border: 1px solid rgba($color-text_dark, .1);
+      border-radius: 4px;
+      min-height: 130px;
+
+      img {
+        filter: grayscale(1);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover img {
+        filter: grayscale(0);
+        transition: 0.3s;
+      }
+    }
+  }
+}

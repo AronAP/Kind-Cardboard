@@ -263,6 +263,43 @@ input {
   margin-bottom: 30px;
 }
 
+.clients {
+  padding: 40px 0 10px;
+}
+
+.clients-company_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 1px solid rgba(55, 55, 55, 0.1);
+  border-radius: 4px;
+  min-height: 130px;
+}
+
+.clients-company_img img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.clients-company_img:hover {
+  cursor: pointer;
+}
+
+.clients-company_img:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);

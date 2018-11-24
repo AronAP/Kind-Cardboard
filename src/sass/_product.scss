@@ -1,0 +1,20 @@
+.product {
+  padding: 40px 0 10px;
+
+  &-block {
+    text-align: center;
+
+    &_img {
+      margin-bottom: 30px;
+    }
+
+    &_title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    &_buttons {
+      margin-bottom: 30px;
+    }
+  }
+}

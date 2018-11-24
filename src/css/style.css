@@ -10,7 +10,7 @@ img {
   color: #fff;
   background-color: #ff9d00;
   padding: 13px 18px;
-  border: none;
+  border: 1px solid #ff9d00;
   border-radius: 5px;
   font-size: 22px;
   line-height: 22px;
@@ -23,19 +23,30 @@ img {
 .button:hover {
   cursor: pointer;
   background-color: #ffb133;
+  border: 1px solid #ffb133;
+}
+
+.button-o {
+  color: #373737;
+  background-color: transparent;
+  border: 1px solid #373737;
+}
+
+.button-o:hover {
+  color: #ff9d00;
+  background-color: transparent;
+  border: 1px solid #ff9d00;
 }
 
 .button img {
   vertical-align: middle;
 }
 
-.header-phone_button {
-  margin-left: 13px;
-}
-
+.header-phone_button,
 .form-button_main,
-.form-button_modal {
-  margin-left: 10px;
+.form-button_modal,
+.product-block_button {
+  margin-left: 12px;
 }
 
 input {
@@ -231,6 +242,27 @@ input {
   font-size: 14px;
 }
 
+.product {
+  padding: 40px 0 10px;
+}
+
+.product-block {
+  text-align: center;
+}
+
+.product-block_img {
+  margin-bottom: 30px;
+}
+
+.product-block_title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.product-block_buttons {
+  margin-bottom: 30px;
+}
+
 .overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -333,4 +365,23 @@ input {
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 27px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title::after {
+  content: url("../img/wavy-line.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 10px;
 }

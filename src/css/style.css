@@ -263,6 +263,93 @@ input {
   margin-bottom: 30px;
 }
 
+.production {
+  padding: 40px 0;
+}
+
+.production-slider_for {
+  margin-bottom: 13px;
+  overflow: hidden;
+}
+
+.production-slider_nav {
+  padding: 0 28px 0 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.production-slider_nav .slider-nav_img {
+  position: relative;
+  margin: 0 3px;
+}
+
+.production-slider_nav .slider-nav_img .img-mask {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.production-slider_nav .slider-nav_img .img-mask:hover {
+  border: 2px solid #ff9d00;
+}
+
+.production-slider .slick-slide.slick-current .img-mask {
+  background-color: transparent;
+}
+
+.production-slider .production-arrow {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 22px;
+  border: 1px solid #ff9d00;
+  z-index: 1;
+}
+
+.production-slider .production-arrow_left {
+  background: url("../img/production/arrow-left.png") center no-repeat;
+  left: 0;
+}
+
+.production-slider .production-arrow_left:hover {
+  background: url("../img/production/arrow-left_active.png") center no-repeat;
+  background-color: #ff9d00;
+}
+
+.production-slider .production-arrow_right {
+  background: url("../img/production/arrow-right.png") center no-repeat;
+  right: 0;
+}
+
+.production-slider .production-arrow_right:hover {
+  background: url("../img/production/arrow-right_active.png") center no-repeat;
+  background-color: #ff9d00;
+}
+
+.production-text {
+  margin-top: 20px;
+  margin-left: -30px;
+}
+
+.production-text_title {
+  font-size: 28px;
+  line-height: 22px;
+  padding: 20px 0 16px 30px;
+  background-color: #ff9d00;
+  color: #fff;
+}
+
+.production-text_descrip {
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 30px;
+}
+
 .clients {
   padding: 40px 0 10px;
 }
@@ -286,6 +373,9 @@ input {
 .clients-company_img img {
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .clients-company_img:hover {
@@ -295,9 +385,6 @@ input {
 .clients-company_img:hover img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .overlay {

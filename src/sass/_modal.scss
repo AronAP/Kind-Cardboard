@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
 }
-  
+
 .popup {
   position: fixed;
   width: 750px;
@@ -15,7 +15,7 @@
   margin-left: -375px;
   margin-top: 200px;
   color: $color-text_light;
-  
+
   &-close {
     position: absolute;
     top: 0;
@@ -25,10 +25,10 @@
 
     &:hover {
       color: darken($color-text_light, 20%);
-      cursor: pointer;  
+      cursor: pointer;
     }
   }
-  
+
   &-header {
     font-family: "Roboto", sans-serif;
     font-size: 21px;
@@ -37,13 +37,13 @@
     text-align: center;
     background-color: $color-main;
   }
-  
+
   &-form {
     position: relative;
     background: $color-bg_dark url(../img/modal/modal-bg.jpg) center no-repeat;
     background-size: cover;
     z-index: 10;
-    
+
     &::before {
       content: '';
       display: block;
@@ -52,10 +52,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.14);
+      background-color: black;
+      opacity: .15;
       z-index: -1;
     }
-    
+
     &_title {
       font-family: "Roboto", sans-serif;
       font-size: 30px;
@@ -74,7 +75,7 @@
     .feedback-form {
       text-align: center;
       padding-bottom: 5px;
-      
+
       label {
         display: block;
         text-align: center;
@@ -82,12 +83,19 @@
         line-height: 30px;
         margin-bottom: 15px;
       }
-      
+
       .form-input {
         display: inline-flex;
+
+        input {
+          border-radius: 5px;
+          border: none;
+          padding-left: 20px;
+          min-width: 305px;
+        }
       }
     }
-    
+
     &_subtitle {
       font-size: 14px;
       padding-bottom: 50px;

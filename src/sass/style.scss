@@ -1,7 +1,6 @@
 @import 'reset';
 @import 'variables';
 @import 'button';
-@import 'input';
 @import 'header';
 @import 'main';
 @import 'advantages';
@@ -14,6 +13,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  outline: none;
 }
 
 .section-title {

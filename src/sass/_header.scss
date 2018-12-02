@@ -1,29 +1,45 @@
 .header {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-text_dark;
+  z-index: 5;
 
-  &-logo {
-
-    img {
-      height: 59px;
-    }
-  }
-
-  &-phone {
+  &-menu {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+    text-decoration: none;
+    text-transform: uppercase;
 
-    &_number {
-      font-size: 22px;
+    &_items {
+      position: relative;
+      font-size: 12px;
       line-height: 22px;
-      text-transform: uppercase;
-      padding: 0 13px;
+      color: $color-text_light;
 
-      &:first-child {
-        border-right: 1px solid lighten($color-text_dark, 50%);
+      &::after {
+        content: '';
+        position: absolute;
+        transform-origin: center;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+        background-color: $color-main;
+        opacity: 0;
+        transition: .3s;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $color-text_light;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        transform: scaleX(50);
       }
     }
   }

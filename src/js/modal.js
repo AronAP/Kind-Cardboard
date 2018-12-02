@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('.header-phone_button').on('click', function() {
+  $('.title-phone_button').on('click', function() {
     $('.modal').show();
   });
   

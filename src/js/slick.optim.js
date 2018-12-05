@@ -7,6 +7,7 @@ $(document).ready(function () {
     arrows: false,
     fade: true,
     autoplay: true,
+    draggable: false,
     autoplaySpeed: 5000,
     asNavFor: '.production-slider_nav'
   });

@@ -24,11 +24,21 @@
     &_left {
       background: url(../img/reviews/arrow-left.png) center no-repeat;
       left: 0;
+      filter: grayscale(1) brightness(0);
+    }
+
+    &_left:hover {
+      filter: grayscale(0) brightness(1);
     }
 
     &_right {
       background: url(../img/reviews/arrow-right.png) center no-repeat;
       right: 0;
+      filter: grayscale(1) brightness(0);
+    }
+
+    &_right:hover {
+      filter: grayscale(0) brightness(1);
     }
   }
 }

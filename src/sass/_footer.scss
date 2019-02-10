@@ -1,0 +1,54 @@
+.footer {
+  width: 100%;
+
+  &-info {
+    padding: 30px 0;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-text_light;
+    background-color: darken($color-text_dark, 11%);
+
+    a {
+      text-decoration: none;
+      color: $color-main;
+    }
+
+    &_text {
+      margin-bottom: 10px;
+    }
+
+    &_dev {
+
+      .dev {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        transform: translateY(4px);
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: 200%;
+          width: 10%;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.3);
+          transform: rotate(45deg) translateY(-30%);
+          margin-left: -30px;
+          transition: .7s;
+        }
+
+        a {
+          text-transform: none;
+          line-height: initial;
+
+        }
+      }
+    }
+  }
+
+  &:hover .dev::before {
+    margin-left: 60px;
+  }
+}

@@ -27,7 +27,7 @@
   &-block {
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: $color-text_light;
     padding: 30px 10px;
     margin-bottom: 30px;
 
@@ -35,7 +35,7 @@
       flex-basis: 22%;
       padding-right: 10px;
     }
-    
+
     &_text {
       flex-basis: 78%;
 
@@ -43,7 +43,7 @@
         font-family: 'Roboto Black', sans-serif;
         font-size: 15px;
       }
-  
+
       .block-text_descrip {
         font-size: 14px;
       }

@@ -19,46 +19,14 @@
   <link rel="stylesheet" href="css/style.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/maskedinput.min.js" defer></script>
   <script src="js/modal.js" defer></script>
   <script src="js/smoothScroll.js" defer></script>
   <script src="js/slick.min.js" defer></script>
   <script src="js/slick.optim.js" defer></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOD7Rd0m59FtqmuzpFUFwGtCEjWb89HTA&callback=initMap"
     async defer></script>
-  <script>
-    function initMap() {
-      var myCoordinates = {lat: 54.752501, lng: 56.001928},
-          popupContent = '<p class="content" style="font-size: 13px; text-align: center;"><span style="font-weight: 900;">Офис Доброго Картона</span><br>г. Уфа, Проспект октября, 46</p>',
-          myMarkerImg = 'img/contacts/Marker-Cardboard.png';
-
-      var optionsMap = {
-        center: myCoordinates,
-        zoom: 17,
-      }
-
-      var myMap = new google.maps.Map(document.getElementById('map'), optionsMap);
-      
-      var imageMarker = {
-	      url:myMarkerImg,
-	      scaledSize: new google.maps.Size(38, 55),
-      }
-
-      var myMarker = new google.maps.Marker({
-        map: myMap,
-        position: myCoordinates,
-        icon: imageMarker,
-        title: 'Добрый Картон'
-      });
-
-      var infowindow = new google.maps.InfoWindow({
-            content: popupContent
-        });
-
-      myMarker.addListener('click', function() {
-      infowindow.open(myMap, myMarker);
-      });
-    }
-  </script>
+  <script src="js/google-maps.js" async defer></script>
 </head>
 
 <body>
@@ -173,7 +141,11 @@
               </div>
               <!-- /.form-text -->
               <form action="#" class="form-request">
-                <input type="text" placeholder="Введите номер телефона">
+                <!-- <input type="text" placeholder="Введите номер телефона"> -->
+                <div class="form-input">
+                  <input type="tel" class="phone" placeholder="Введите номер телефона">
+                  <a href="javascript:void(0)" class="form-reset">&times;</a>
+                </div>
                 <button class="form-button_main button">
                   Оставить заявку!
                 </button>
@@ -415,11 +387,11 @@
                 </div>
                 <!-- /.product-block_title -->
                 <div class="product-block_buttons">
-                  <button class="button button-o">
+                  <button class="button button-o product_button__first">
                     Подробнее
                   </button>
                   <!-- /.button button-o -->
-                  <button class="button product-block_button">
+                  <button class="button product-block_button button-calc">
                     Получить расчет
                   </button>
                   <!-- /.button product-block_button -->
@@ -444,11 +416,11 @@
                 </div>
                 <!-- /.product-block_title -->
                 <div class="product-block_buttons">
-                  <button class="button button-o">
+                  <button class="button button-o product_button__second">
                     Подробнее
                   </button>
                   <!-- /.button button-o -->
-                  <button class="button product-block_button">
+                  <button class="button product-block_button button-calc">
                     Получить расчет
                   </button>
                   <!-- /.button product-block_button -->
@@ -476,11 +448,11 @@
                 </div>
                 <!-- /.product-block_title -->
                 <div class="product-block_buttons">
-                  <button class="button button-o">
+                  <button class="button button-o product_button__third">
                     Подробнее
                   </button>
                   <!-- /.button button-o -->
-                  <button class="button product-block_button">
+                  <button class="button product-block_button button-calc">
                     Получить расчет
                   </button>
                   <!-- /.button product-block_button -->
@@ -505,11 +477,11 @@
                 </div>
                 <!-- /.product-block_title -->
                 <div class="product-block_buttons">
-                  <button class="button button-o">
+                  <button class="button button-o product_button__fourth">
                     Подробнее
                   </button>
                   <!-- /.button button-o -->
-                  <button class="button product-block_button">
+                  <button class="button product-block_button button-calc">
                     Получить расчет
                   </button>
                   <!-- /.button product-block_button -->
@@ -544,8 +516,17 @@
       </div>
       <!-- /.offer-text -->
       <form action="#" class="offer-form">
+        <label for="name">Укажите ваше имя:</label>
+        <div class="form-input">
+          <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+          <a href="javascript:void(0)" class="form-reset">&times;</a>
+        </div>
+
         <label for="offer-phone">Введите ваш номер телефона:</label>
-        <input type="tel" id="offer-phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+        <div class="form-input">
+          <input type="tel" id="offer-phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+          <a href="javascript:void(0)" class="form-reset">&times;</a>
+        </div>
         <button class="button form-button_offer">Оставить заявку!</button>
         <!-- /.button form-button_offer -->
       </form>
@@ -895,7 +876,7 @@
             </div>
             <!-- /.text-descrip -->
 
-            <button class="button info-block_button">
+            <button class="button info-block_button ">
               Заказать звонок
             </button>
             <!-- /.button info-block_button -->
@@ -946,8 +927,8 @@
   </footer>
   <!-- /.footer -->
 
-  <!-- ............................................. -->
-  <section class="modal">
+  <!-- ......................Modals...................... -->
+  <section class="modal-call modals mCustomScrollbar" data-mcs-theme="dark">
     <div class="overlay"></div>
     <!-- /.overlay -->
     <div class="popup">
@@ -959,12 +940,18 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
         <!-- /.popup-form_title -->
         <form action="#" class="feedback-form">
+          <label for="name">Укажите ваше имя:</label>
+          <div class="form-input">
+            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
           <label for="phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
-            <button class="form-button_modal button">Оставить заявку!</button>
-            <!-- /.form-button button -->
+            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
+          <button type="submit" class="form-button_modal button">Оставить заявку!</button>
+          <!-- /.form-button button -->
         </form>
         <!-- /.feedback-form -->
         <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
@@ -974,7 +961,483 @@
     </div>
     <!-- /.popup -->
   </section>
-  <!-- /.modal -->
+  <!-- /.modal-call modals -->
+
+  <section class="modal-product__first modal-product modals">
+    <div class="overlay"></div>
+    <!-- /.overlay -->
+    <div class="popup">
+      <div class="popup-close">&times;</div>
+      <!-- /.popup-close -->
+      <div class="popup-header">Гофрокороб 4-х клапанный</div>
+      <!-- /.popup-header -->
+
+      <div class="popup-descr">
+        <div class="popup-descr_img">
+          <img src="img/product/img-1.png" alt="Гофрокороб 4-х клапанный">
+        </div>
+        <div class="popup-descr_text">
+          <p>
+            Гофрокороб 4-х клапанный является самым распространённым и универсальным видом упаковки из гофрокартона,
+            подходящим для хранения и транспортировки продукции. Гофрокороба такого типа бывают стандартными, без
+            верхних клапанов, с перекрывающимися клапанами, короб в составе «крышка – дно». Короба подходят как для
+            ручной сборки, так и для автоматических линий упаковки.
+          </p>
+          <p>
+            При заказе данного вида коробов важно указывать основные параметры: <br>длина (L) х ширина (В) х высота (H)
+            внутренние размеры короба, указанные в миллиметрах.
+          </p>
+        </div>
+        <!-- /.popup-descr_text -->
+      </div>
+      <!-- /.popup-descr -->
+
+      <div class="popup-advantage">
+        <div class="popup-advantage_block">
+          <img src="img/modal/production.png" alt="Production" class="advantage-img">
+          <div class="advantage-text">
+            Собственное производство
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/quality.png" alt="Quality" class="advantage-img">
+          <div class="advantage-text">
+            Стабильное качество по ГОСТу
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/shipping.png" alt="Shipping" class="advantage-img">
+          <div class="advantage-text">
+            Доставка по всей России
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/creation.png" alt="Creation" class="advantage-img">
+          <div class="advantage-text">
+            Бесплатное создание образцов
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/flex.png" alt="Flex" class="advantage-img">
+          <div class="advantage-text">
+            Нанесение флексопечати
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/safety.png" alt="Safety" class="advantage-img">
+          <div class="advantage-text">
+            Страховой запас гофрокартона на нашем складе
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+      </div>
+      <!-- /.popup-advantage -->
+
+      <div class="popup-form">
+        <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
+        <!-- /.popup-form_title -->
+        <form action="#" class="feedback-form">
+          <label for="name">Укажите ваше имя:</label>
+          <div class="form-input">
+            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <label for="phone">Введите ваш номер телефона:</label>
+          <div class="form-input">
+            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <button type="submit" class="form-button_modal button">Оставить заявку!</button>
+          <!-- /.form-button button -->
+        </form>
+        <!-- /.feedback-form -->
+        <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
+        <!-- /.popup-form_subtitle -->
+      </div>
+      <!-- /.popup-form -->
+    </div>
+    <!-- /.popup -->
+  </section>
+  <!-- /.modal-product__first modal-product modals -->
+
+  <section class="modal-product__second modal-product modals">
+    <div class="overlay"></div>
+    <!-- /.overlay -->
+    <div class="popup">
+      <div class="popup-close">&times;</div>
+      <!-- /.popup-close -->
+      <div class="popup-header">Гофролоток</div>
+      <!-- /.popup-header -->
+
+      <div class="popup-descr">
+        <div class="popup-descr_img">
+          <img src="img/product/img-2.png" alt="Гофролоток">
+        </div>
+        <div class="popup-descr_text">
+          <p>Гофролоток - один самых распространённых видов самосборных коробов, который представляет собой поддон с
+            небольшой
+            высотой открытого типа, т.е. не имеющего крышки.</p>
+          <p>Благодаря высокой прочности данной упаковки продукция в гофролотках выдерживает большие нагрузки при
+            штабелировании и
+            ее можно перевозить на большие расстояния без потерь товарного вида.</p>
+          <p>Продукцию в гофролотке удобно представлять в торговом зале для конечного потребителя. Основное
+            распространение получили
+            гофролотки овощные, под птицу, под рыбу, под кондитерские изделия.</p>
+        </div>
+        <!-- /.popup-descr_text -->
+      </div>
+      <!-- /.popup-descr -->
+
+      <div class="popup-advantage">
+        <div class="popup-advantage_block">
+          <img src="img/modal/production.png" alt="Production" class="advantage-img">
+          <div class="advantage-text">
+            Собственное производство
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/quality.png" alt="Quality" class="advantage-img">
+          <div class="advantage-text">
+            Стабильное качество по ГОСТу
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/shipping.png" alt="Shipping" class="advantage-img">
+          <div class="advantage-text">
+            Доставка по всей России
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/creation.png" alt="Creation" class="advantage-img">
+          <div class="advantage-text">
+            Бесплатное создание образцов
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/flex.png" alt="Flex" class="advantage-img">
+          <div class="advantage-text">
+            Нанесение флексопечати
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/safety.png" alt="Safety" class="advantage-img">
+          <div class="advantage-text">
+            Страховой запас гофрокартона на нашем складе
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+      </div>
+      <!-- /.popup-advantage -->
+
+      <div class="popup-form">
+        <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
+        <!-- /.popup-form_title -->
+        <form action="#" class="feedback-form">
+          <label for="name">Укажите ваше имя:</label>
+          <div class="form-input">
+            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <label for="phone">Введите ваш номер телефона:</label>
+          <div class="form-input">
+            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <button type="submit" class="form-button_modal button">Оставить заявку!</button>
+          <!-- /.form-button button -->
+        </form>
+        <!-- /.feedback-form -->
+        <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
+        <!-- /.popup-form_subtitle -->
+      </div>
+      <!-- /.popup-form -->
+    </div>
+    <!-- /.popup -->
+  </section>
+  <!-- /.modal-product__second modal-product modals -->
+
+  <section class="modal-product__third modal-product modals">
+    <div class="overlay"></div>
+    <!-- /.overlay -->
+    <div class="popup">
+      <div class="popup-close">&times;</div>
+      <!-- /.popup-close -->
+      <div class="popup-header">Гофрокороб самосборный (сложная высечка)</div>
+      <!-- /.popup-header -->
+
+      <div class="popup-descr">
+        <div class="popup-descr_img">
+          <img src="img/product/img-3.png" alt="Гофрокороб самосборный (сложная высечка)">
+        </div>
+        <div class="popup-descr_text">
+          <p>Гофрокороб самосборный – вид упаковки из гофрокартона, который представляет собой высеченный по чертежу
+            гофролист. При
+            сборке таких коробов нет необходимости применять дополнительные материалы (как клей, скотч, скобы), что
+            удобно для
+            открывания-закрывания гофрокороба без потери внешнего вида упаковки из картона.</p>
+          <p>Распространённые типы самосборных коробов – короб с крышкой на фиксаторах, лотки с отрытым верхом, короба
+            типа
+            «телевизор», гофроподдоны, короба по типу «крышка - дно», телескопические короба, короба оберточного типа.</p>
+        </div>
+        <!-- /.popup-descr_text -->
+      </div>
+      <!-- /.popup-descr -->
+
+      <div class="popup-advantage">
+        <div class="popup-advantage_block">
+          <img src="img/modal/production.png" alt="Production" class="advantage-img">
+          <div class="advantage-text">
+            Собственное производство
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/quality.png" alt="Quality" class="advantage-img">
+          <div class="advantage-text">
+            Стабильное качество по ГОСТу
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/shipping.png" alt="Shipping" class="advantage-img">
+          <div class="advantage-text">
+            Доставка по всей России
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/creation.png" alt="Creation" class="advantage-img">
+          <div class="advantage-text">
+            Бесплатное создание образцов
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/flex.png" alt="Flex" class="advantage-img">
+          <div class="advantage-text">
+            Нанесение флексопечати
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/safety.png" alt="Safety" class="advantage-img">
+          <div class="advantage-text">
+            Страховой запас гофрокартона на нашем складе
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+      </div>
+      <!-- /.popup-advantage -->
+
+      <div class="popup-form">
+        <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
+        <!-- /.popup-form_title -->
+        <form action="#" class="feedback-form">
+          <label for="name">Укажите ваше имя:</label>
+          <div class="form-input">
+            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <label for="phone">Введите ваш номер телефона:</label>
+          <div class="form-input">
+            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <button type="submit" class="form-button_modal button">Оставить заявку!</button>
+          <!-- /.form-button button -->
+        </form>
+        <!-- /.feedback-form -->
+        <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
+        <!-- /.popup-form_subtitle -->
+      </div>
+      <!-- /.popup-form -->
+    </div>
+    <!-- /.popup -->
+  </section>
+  <!-- /.modal-product__third modal-product modals -->
+
+  <section class="modal-product__fourth modal-product modals">
+    <div class="overlay"></div>
+    <!-- /.overlay -->
+    <div class="popup">
+      <div class="popup-close">&times;</div>
+      <!-- /.popup-close -->
+      <div class="popup-header">Листовой гофрокартон</div>
+      <!-- /.popup-header -->
+
+      <div class="popup-descr">
+        <div class="popup-descr_img">
+          <img src="img/product/img-4.png" alt="Листовой гофрокартон">
+        </div>
+        <div class="popup-descr_text">
+          <p>Производство листового гофрокартона является основой производственного цикла в «Добрый картон», который в
+            дальнейшем
+            идет на переработку и выпуск изделий таких как гофрокороб, гофролоток, проктадка и т.д.</p>
+          <p>Мы предлагаем к продаже 3-х слойный листовой гофрокартон в листах марок Т21-Т27 профиль С (высота профиля
+            4 мм) бурого
+            или белого цветов.</p>
+        </div>
+        <!-- /.popup-descr_text -->
+      </div>
+      <!-- /.popup-descr -->
+
+      <div class="popup-advantage">
+        <div class="popup-advantage_block">
+          <img src="img/modal/production.png" alt="Production" class="advantage-img">
+          <div class="advantage-text">
+            Собственное производство
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/quality.png" alt="Quality" class="advantage-img">
+          <div class="advantage-text">
+            Стабильное качество по ГОСТу
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/shipping.png" alt="Shipping" class="advantage-img">
+          <div class="advantage-text">
+            Доставка по всей России
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/creation.png" alt="Creation" class="advantage-img">
+          <div class="advantage-text">
+            Бесплатное создание образцов
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/flex.png" alt="Flex" class="advantage-img">
+          <div class="advantage-text">
+            Нанесение флексопечати
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+        <div class="popup-advantage_block">
+          <img src="img/modal/safety.png" alt="Safety" class="advantage-img">
+          <div class="advantage-text">
+            Страховой запас гофрокартона на нашем складе
+          </div>
+          <!-- /.advantage-text -->
+        </div>
+        <!-- /.popup-advantage_block -->
+      </div>
+      <!-- /.popup-advantage -->
+
+      <div class="popup-form">
+        <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
+        <!-- /.popup-form_title -->
+        <form action="#" class="feedback-form">
+          <label for="name">Укажите ваше имя:</label>
+          <div class="form-input">
+            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <label for="phone">Введите ваш номер телефона:</label>
+          <div class="form-input">
+            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <button type="submit" class="form-button_modal button">Оставить заявку!</button>
+          <!-- /.form-button button -->
+        </form>
+        <!-- /.feedback-form -->
+        <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
+        <!-- /.popup-form_subtitle -->
+      </div>
+      <!-- /.popup-form -->
+    </div>
+    <!-- /.popup -->
+  </section>
+  <!-- /.modal-product__fourth modal-product modals -->
+
+  <section class="modal-calc modals">
+    <div class="overlay"></div>
+    <!-- /.overlay -->
+    <div class="popup">
+      <div class="popup-close">&times;</div>
+      <!-- /.popup-close -->
+      <div class="popup-header">Заявка на консультацию менеджера</div>
+      <!-- /.popup-header -->
+      <div class="popup-form">
+        <div class="popup-form_title">Перезвоним в течение 5 минут</div>
+        <!-- /.popup-form_title -->
+        <form action="#" class="feedback-form">
+          <div class="form-input">
+            <input type="text" placeholder="Ваше имя" maxlength="30" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <div class="form-input">
+            <input type="tel" class="phone" placeholder="Контактный телефон">
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <div class="form-input">
+            <input type="number" placeholder="Длина изделия (м)" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <div class="form-input">
+            <input type="number" placeholder="Ширина изделия (м)" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <div class="form-input">
+            <input type="number" placeholder="Высота изделия (м)" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <div class="form-input">
+            <input type="number" placeholder="Количество изделий (штук)" required>
+            <a href="javascript:void(0)" class="form-reset">&times;</a>
+          </div>
+          <button type="submit" class="form-button_modal button">Получить консультацию</button>
+          <!-- /.form-button button -->
+        </form>
+        <!-- /.feedback-form -->
+        <div class="popup-form_subtitle">*Минимальный заказ 500шт</div>
+        <!-- /.popup-form_subtitle -->
+      </div>
+      <!-- /.popup-form -->
+    </div>
+    <!-- /.popup -->
+  </section>
+  <!-- /.modal-calc modals -->
+
+
 </body>
 
 </html>

@@ -38,23 +38,34 @@
   }
 
   &-form {
-
+    
     label {
       display: block;
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 15px;
     }
-
+    
     input {
-      display: block;
       text-align: center;
+      margin: 0 auto 20px;
       min-width: 365px;
-      margin: 0 auto 10px;
       padding: 14px 18px;
       border: none;
       border-radius: 5px;
       line-height: 16px;
+    }
+
+    .form-reset {
+      position: absolute;
+      transform: translate(-22px, -1px);
+      text-decoration: none;
+      color: lighten($color-text_dark, 40%);
+      font-size: 30px;
+
+      &:hover {
+        color: lighten($color-text_dark, 20%);
+      }
     }
   }
 }

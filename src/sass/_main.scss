@@ -34,7 +34,7 @@
       z-index: -1;
       transform: translate(-50px, 15px);
     }
-    
+
     &::after {
       content: url(../img/main/label.png);
       position: absolute;
@@ -88,6 +88,19 @@
           border: none;
           padding-left: 20px;
           min-width: 305px;
+          padding: 13px 18px;
+        }
+
+        .form-reset {
+          position: absolute;
+          transform: translate(-22px, 2px);
+          text-decoration: none;
+          color: lighten($color-text_dark, 40%);
+          font-size: 30px;
+
+          &:hover {
+            color: lighten($color-text_dark, 20%);
+          }
         }
       }
 

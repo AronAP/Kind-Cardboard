@@ -19,9 +19,10 @@
   <link rel="stylesheet" href="css/style.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/maskedinput.min.js" defer></script>
-  <script src="js/modal.js" defer></script>
   <script src="js/smoothScroll.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/menuMobile.js" defer></script>
+  <script src="js/maskedinput.min.js" defer></script>
   <script src="js/slick.min.js" defer></script>
   <script src="js/slick.optim.js" defer></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOD7Rd0m59FtqmuzpFUFwGtCEjWb89HTA&callback=initMap"
@@ -33,6 +34,10 @@
 
   <header class="header">
     <div class="container">
+      <div class="header-button">
+        <span></span>
+      </div>
+      <!-- /.header-button -->
       <div class="header-menu">
         <a href="javascript://0" onclick="slowScroll ('#main')" class="header-menu_items">О компании</a>
         <!-- /.header-menu_items -->
@@ -60,25 +65,27 @@
   <section class="title">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-4">
-          <div class="title-logo">
-            <img src="img/title/logo.png" alt="Добрый картон">
-          </div>
+        <div class="col-4 col-lg-4">
+          <div class="title-logo"></div>
           <!-- /.title-logo -->
         </div>
         <!-- /.col-4 -->
-        <div class="col-8">
+        <div class="col-8 col-lg-8">
           <div class="title-phone">
-            <div class="title-phone_number">
-              8 (347) 271-54-28
+            <div class="title-phone_numbers">
+              <div class="title-phone_number">
+                8 (347) 271-54-28
+              </div>
+              <!-- /.title-phone_number -->
+              <div class="title-phone_number">
+                8 (937) 363-30-00
+              </div>
+              <!-- /.title-phone_number -->
             </div>
-            <div class="title-phone_number">
-              8 (937) 363-30-00
-            </div>
-            <!-- /.title-phone_number -->
+            <!-- /.title-phone_numbers -->
             <button class="title-phone_button button">
               <img src="img/title/icon-phone.png" alt="">
-              Заказать звонок
+              <span class="hidden-mobile">Заказать звонок</span>
             </button>
           </div>
           <!-- /.title-phone -->
@@ -95,7 +102,7 @@
     <div class="container">
       <div class="row align-items-center">
 
-        <div class="col-6">
+        <div class="col-lg-6 hidden-mobile">
           <div class="main-img">
             <div class="main-img_1">
               <img src="img/main/box.png" alt="">
@@ -110,7 +117,7 @@
         </div>
         <!-- /.col-6 -->
 
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <div class="main-content">
 
             <div class="main-name">
@@ -172,7 +179,7 @@
     <div class="container">
       <div class="advantages-numbers">
         <div class="row align-items-start">
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-number">
               <div class="advantages-number_title">
                 5 лет
@@ -186,7 +193,7 @@
             <!-- /.advantages-number -->
           </div>
           <!-- /.col-4 -->
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-number">
               <div class="advantages-number_title">
                 до 5 000 000 м<sup>2</sup>
@@ -200,7 +207,7 @@
             <!-- /.advantages-number -->
           </div>
           <!-- /.col-4 -->
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-number">
               <div class="advantages-number_title">
                 4 000 м<sup>2</sup>
@@ -221,7 +228,7 @@
 
       <div class="advantages-blocks">
         <div class="row align-items-center">
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-block">
               <div class="advantages-block_img">
                 <img src="img/advantages/1-production.png" alt="Производство">
@@ -243,7 +250,7 @@
           </div>
           <!-- /.col-4 -->
 
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-block">
               <div class="advantages-block_img">
                 <img src="img/advantages/2-samples.png" alt="Бесплатные образцы">
@@ -265,7 +272,7 @@
           </div>
           <!-- /.col-4 -->
 
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-block">
               <div class="advantages-block_img">
                 <img src="img/advantages/3-quality.png" alt="Стабильное качество">
@@ -293,7 +300,7 @@
 
       <div class="advantages-blocks">
         <div class="row align-items-center">
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-block">
               <div class="advantages-block_img">
                 <img src="img/advantages/4-safety stock.png" alt="Страховой запас">
@@ -315,7 +322,7 @@
           </div>
           <!-- /.col-4 -->
 
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-block">
               <div class="advantages-block_img">
                 <img src="img/advantages/5-flexographic printing.png" alt="Флексопечать">
@@ -337,7 +344,7 @@
           </div>
           <!-- /.col-4 -->
 
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <div class="advantages-block">
               <div class="advantages-block_img">
                 <img src="img/advantages/6-supplements.png" alt="Гидрофобные добавки">
@@ -375,7 +382,7 @@
       <!-- /.product-title -->
       <div class="product-blocks">
         <div class="row align-items-end">
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="product-block">
               <div class="product-block_img">
                 <img src="img/product/img-1.png" alt="Гофрокороб 4-х клапанный">
@@ -402,9 +409,9 @@
             </div>
             <!-- /.product-block -->
           </div>
-          <!-- /.col-6 -->
+          <!-- /.col-12 col-lg-6 -->
 
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="product-block">
               <div class="product-block_img">
                 <img src="img/product/img-2.png" alt="Гофролоток">
@@ -431,12 +438,12 @@
             </div>
             <!-- /.product-block -->
           </div>
-          <!-- /.col-6 -->
+          <!-- /.col-12 col-lg-6 -->
         </div>
         <!-- /.row align-items-end -->
 
         <div class="row align-items-end">
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="product-block">
               <div class="product-block_img">
                 <img src="img/product/img-3.png" alt="Гофрокороб самосборный (сложная высечка)">
@@ -463,9 +470,9 @@
             </div>
             <!-- /.product-block -->
           </div>
-          <!-- /.col-6 -->
+          <!-- /.col-12 col-lg-6 -->
 
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="product-block">
               <div class="product-block_img">
                 <img src="img/product/img-4.png" alt="Листовой гофрокартон">
@@ -492,7 +499,7 @@
             </div>
             <!-- /.product-block -->
           </div>
-          <!-- /.col-6 -->
+          <!-- /.col-12 col-lg-6 -->
         </div>
         <!-- /.row align-items-end -->
       </div>
@@ -544,7 +551,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-7">
+        <div class="col-12 col-lg-7 order-2 order-lg-1">
           <div class="production-slider">
             <div class="production-slider_for">
               <img src="img/production/img1.jpg" alt="Фото">
@@ -555,7 +562,7 @@
               <img src="img/production/img6.jpg" alt="Фото">
             </div>
             <!-- /.production-slider_for -->
-            <div class="production-slider_nav">
+            <div class="production-slider_nav hidden-mobile">
               <div class="slider-nav_img">
                 <img src="img/production/img1.jpg" alt="Фото">
                 <div class="img-mask"></div>
@@ -599,7 +606,7 @@
         </div>
         <!-- /.col-7 -->
 
-        <div class="col-5">
+        <div class="col-12 col-lg-5 order-1 order-lg-2">
           <div class="production-text">
             <h2 class="production-text_title">
               Производство
@@ -634,7 +641,7 @@
   <section class="storage" id="storage">
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="col-12 col-lg-5">
           <div class="storage-text">
             <h2 class="storage-text_title">Собственный склад</h2>
             <!-- /.storage-text_title -->
@@ -648,7 +655,7 @@
           <!-- /.storage-text -->
         </div>
         <!-- /.col-5 -->
-        <div class="col-7">
+        <div class="col-12 col-lg-7">
           <div class="storage-img">
             <img src="img/storage/storage.jpg" alt="Склад">
           </div>
@@ -670,105 +677,101 @@
       <!-- /.clients-title -->
       <div class="clients-company">
         <div class="row">
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/voshod.jpg" alt="ВОСХОД">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-6 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/sterh.jpg" alt="СТЕРХ">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-6 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-12 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/serebrianyi sneg.jpg" alt="Серебряный Снег">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-12 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/avdon.jpg" alt="Авдон">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-3">
+          <!-- /.col-6 col-lg-3 -->
+
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/broilery.jpg" alt="Турбаслинские Бройлеры">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-6 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-12 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/BM.jpg" alt="БАШКИРСКОЕ МОРОЖЕНОЕ">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-12 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/allat.jpg" alt="АЛЛАТ">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-6 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/alternativa.jpg" alt="АЛЬТЕРНАТИВА">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-3">
+          <!-- /.col-6 col-lg-3 -->
+
+          <div class="col-12 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/indiushkin.jpg" alt="ИНДЮШКИН">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-12 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/salavat steklo.jpg" alt="САЛАВАТСТЕКЛО">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-6 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-6 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/molochnyi fermer.jpg" alt="Молочный фермер">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-6 col-lg-3 -->
 
-          <div class="col-3">
+          <div class="col-12 col-lg-3">
             <div class="clients-company_img">
               <img src="img/clients/megi.jpg" alt="МЕГИ">
             </div>
             <!-- /.clients-company_img -->
           </div>
-          <!-- /.col-3 -->
+          <!-- /.col-12 col-lg-3 -->
         </div>
         <!-- /.row -->
       </div>
@@ -830,10 +833,12 @@
   <!-- /.reviews -->
 
   <section class="contacts" id="contacts">
-    <div id="map"></div>
-    <!-- /#map -->
     <div class="container">
       <div class="contacts-info">
+        <div class="section-title">
+          контакты
+        </div>
+        <!-- /.section-title -->
         <div class="contacts-info_block">
           <div class="info-block_img">
             <img src="img/contacts/Map-Marker.png" alt="Адрес">
@@ -906,6 +911,8 @@
       <!-- /.contacts-info -->
     </div>
     <!-- /.container -->
+    <div id="map"></div>
+    <!-- /#map -->
   </section>
   <!-- /.contacts -->
 
@@ -928,7 +935,7 @@
   <!-- /.footer -->
 
   <!-- ......................Modals...................... -->
-  <section class="modal-call modals mCustomScrollbar" data-mcs-theme="dark">
+  <section class="modal-call modals">
     <div class="overlay"></div>
     <!-- /.overlay -->
     <div class="popup">
@@ -940,14 +947,14 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
         <!-- /.popup-form_title -->
         <form action="#" class="feedback-form">
-          <label for="name">Укажите ваше имя:</label>
+          <label for="modal-call_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-call_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
-          <label for="phone">Введите ваш номер телефона:</label>
+          <label for="modal-call_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-call_phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -984,7 +991,7 @@
             ручной сборки, так и для автоматических линий упаковки.
           </p>
           <p>
-            При заказе данного вида коробов важно указывать основные параметры: <br>длина (L) х ширина (В) х высота (H)
+            При заказе данного вида коробов важно указывать основные параметры: длина (L) х ширина (В) х высота (H)
             внутренние размеры короба, указанные в миллиметрах.
           </p>
         </div>
@@ -1048,14 +1055,14 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
         <!-- /.popup-form_title -->
         <form action="#" class="feedback-form">
-          <label for="name">Укажите ваше имя:</label>
+          <label for="modal-product__first_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-product__first_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
-          <label for="phone">Введите ваш номер телефона:</label>
+          <label for="modal-product__first_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-product__first_phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1155,14 +1162,14 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
         <!-- /.popup-form_title -->
         <form action="#" class="feedback-form">
-          <label for="name">Укажите ваше имя:</label>
+          <label for="modal-product__second_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-product__second_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
-          <label for="phone">Введите ваш номер телефона:</label>
+          <label for="modal-product__second_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-product__second_phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1261,14 +1268,14 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
         <!-- /.popup-form_title -->
         <form action="#" class="feedback-form">
-          <label for="name">Укажите ваше имя:</label>
+          <label for="modal-productt__third_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-productt__third_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
-          <label for="phone">Введите ваш номер телефона:</label>
+          <label for="modal-productt__third_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-productt__third_phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1365,14 +1372,14 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку изделий</span></div>
         <!-- /.popup-form_title -->
         <form action="#" class="feedback-form">
-          <label for="name">Укажите ваше имя:</label>
+          <label for="modal-product__fourth_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-product__fourth_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
-          <label for="phone">Введите ваш номер телефона:</label>
+          <label for="modal-product__fourth_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-product__fourth_phone" class="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>

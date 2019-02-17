@@ -6,10 +6,10 @@
   margin-top: 56px;
 
   &-logo {
-
-    img {
-      height: 59px;
-    }
+    background: $color-text_light url('../img/title/logo.png') no-repeat center center;
+    background-size: 100%;
+    height: 59px;
+    width: 190px;
   }
 
   &-phone {
@@ -18,10 +18,14 @@
     align-items: center;
 
     &_number {
+      padding: 0 13px;
       font-size: 22px;
       line-height: 22px;
       text-transform: uppercase;
-      padding: 0 13px;
+
+      &s {
+        display: flex;
+      }
 
       &:first-child {
         border-right: 1px solid lighten($color-text_dark, 50%);

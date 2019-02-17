@@ -6,6 +6,10 @@
   background-color: $color-text_dark;
   z-index: 3;
 
+  &-button {
+    display: none;
+  }
+
   &-menu {
     display: flex;
     justify-content: space-between;

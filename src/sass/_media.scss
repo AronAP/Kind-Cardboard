@@ -4,10 +4,15 @@
     display: none;
   }
 
+  .button {
+    font-size: 15px;
+  }
+
+  // Header-block (menu)
   .header {
     height: 100vh;
     background-color: rgba($color-text_dark, .9);
-    z-index: 10;
+    z-index: 4;
     transform: translateX(-100vw);
     transition: all .5s;
 
@@ -18,15 +23,15 @@
     &-button {
       display: block;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 40px;
-      height: 40px;
+      top: 7px;
+      left: 7px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       box-shadow: 1px 1px 5px rgba($color-text_dark, .4);
       background-color: $color-text_light;
       cursor: pointer;
-      transform: translateX(110vw);
+      transform: translateX(100vw);
       transition: all .5s;
 
       span,
@@ -36,8 +41,8 @@
         top: 50%;
         left: 50%;
         margin-top: -1px;
-        margin-left: -10px;
-        width: 20px;
+        margin-left: -9px;
+        width: 18px;
         height: 2px;
         text-align: center;
         background-color: $color-text_dark;
@@ -55,7 +60,7 @@
       }
 
       &_active {
-        transform: translateX(10vw);
+        transform: translateX(0);
 
         span {
           transform: rotate(225deg);
@@ -79,6 +84,7 @@
 
       &_items {
         width: 100%;
+        font-size: 14px;
         text-align: center;
         padding: 4% 0;
 
@@ -88,14 +94,536 @@
         }
 
         &:hover {
-          background-color: rgba($color-text_light, .4);
+          background-color: rgba($color-main, .4);
         }
       }
     }
   }
 
+  // Title-block
+  .title {
+    height: 50px;
+    margin-top: 0;
+
+    &-logo {
+      background: $color-main url('../img/title/logo-small.png') no-repeat center center;
+      background-size: 70%;
+      width: 36px;
+      height: 36px;
+      border: 1px solid $color-main;
+      border-radius: 5px;
+      margin-left: 40px;
+    }
+
+    &-phone {
+
+      &_button {
+        padding: 8px;
+      }
+
+      &_number {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 0;
+
+        &s {
+          flex-direction: column;
+          padding: 0 13px 0 0;
+        }
+
+        &:first-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  // Main-block
+  .main {
+    padding: 40px 0;
+    position: relative;
+    z-index: 0;
+    color: $color-text_light;
+
+    &-content {
+      text-align: center;
+
+      .name {
+
+        &_title {
+          line-height: 24px;
+          font-size: 24px;
+          color: $color-main;
+        }
+
+        &_subtitle {
+          line-height: 35px;
+          font-size: 18px;
+        }
+      }
+
+      &_form {
+        background-color: transparent;
+        padding: 25px 0 0;
+
+        .form-text {
+          font-size: 15px;
+          line-height: 18px;
+          margin-bottom: 15px;
+
+          &_alert {
+            display: block;
+            margin-top: 10px;
+          }
+        }
+
+        .form-request {
+          display: block;
+          margin-bottom: 10px;
+
+          input {
+            text-align: center;
+            font-size: 15px;
+            min-width: 290px;
+            margin-bottom: 15px;
+          }
+
+          .form-reset {
+            transform: translate(-22px, 4px);
+            font-size: 25px;
+          }
+        }
+
+        .form-button_main {
+          margin-left: 0;
+        }
+
+        .form-text_small {
+          font-size: 13px;
+          margin-left: 0;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  // Advantages-block
+  .advantages {
+    padding: 25px 0 15px;
+
+    &-numbers {
+      margin-bottom: 10px;
+    }
+
+    &-number {
+      margin-bottom: 15px;
 
 
+      &_title {
+        font-size: 30px;
+
+        sup {
+          font-size: 18px;
+        }
+      }
+
+      &_descrip {
+        font-size: 14px;
+      }
+    }
+
+    &-block {
+      padding: 25px 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Product-block
+  .product {
+    padding: 30px 0 0;
+
+    &-block {
+
+      &_img {
+        margin-bottom: 20px;
+      }
+
+      &_title {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      &_buttons {
+        margin-bottom: 30px;
+
+        .button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // Offer-block
+  .offer {
+    padding: 30px 0;
+    margin-bottom: 30px;
+
+    &-text {
+      line-height: 24px;
+      margin-bottom: 15px;
+
+      &_title {
+        font-family: 'Roboto Black', sans-serif;
+        font-size: 20px;
+      }
+
+      &_subtitle {
+        font-size: 16px;
+      }
+
+      &_small {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    &-form {
+
+      label {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 15px;
+      }
+
+      input {
+        min-width: 290px;
+        font-size: 15px;
+      }
+
+      .form-reset {
+        transform: translate(-22px, 4px);
+        font-size: 25px;
+      }
+    }
+  }
+
+  // Production-block
+  .production {
+    padding: 0;
+
+    &-slider {
+      margin-bottom: 50px;
+
+      &_for {
+        overflow: visible;
+      }
+
+      .slick-dots {
+        bottom: -20px;
+      }
+
+      .slick-dots li button::before {
+        font-size: 20px;
+        color: $color-main;
+      }
+
+      .production-arrow {
+        top: 50%;
+        height: 40%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &_left {
+          background: url(../img/production/arrow-left_active.png) center no-repeat;
+          background-color: $color-main;
+
+          &:hover {
+            background: url(../img/production/arrow-left.png) center no-repeat;
+            background-color: $color-text_light;
+          }
+        }
+
+        &_right {
+          background: url(../img/production/arrow-right_active.png) center no-repeat;
+          background-color: $color-main;
+
+          &:hover {
+            background: url(../img/production/arrow-right.png) center no-repeat;
+            background-color: $color-text_light;
+          }
+        }
+      }
+    }
+
+    &-text {
+      text-align: center;
+      margin-top: 0;
+      margin-left: 0;
+
+      &_title {
+        width: 120%;
+        margin-left: -10%;
+        font-size: 20px;
+        line-height: 18px;
+        padding: 15px 0;
+        margin-bottom: 15px;
+      }
+
+      &_descrip {
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // Storage-block
+  .storage {
+    padding: 0;
+
+    &-text {
+      text-align: center;
+      margin-top: 0;
+      margin-right: 0;
+
+      &_title {
+        width: 120%;
+        margin-left: -10%;
+        font-size: 20px;
+        line-height: 18px;
+        padding: 15px 0;
+        margin-bottom: 15px;
+      }
+
+      &_descrip {
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 0;
+        margin-bottom: 20px;
+        padding-right: 0;
+
+        span {
+          line-height: 25px;
+          font-size: 18px;
+
+          sup {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  // Clients-block
+  .clients {
+    padding: 30px 0 0;
+
+    &-company {
+
+      &_img {
+        min-height: 110px;
+
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  // Reviews-block
+  .reviews {
+    padding: 30px 0;
+  }
+
+  // Contacts-block
+  .contacts {
+    background-color: $color-text_light;
+    height: 100%;
+
+    #map {
+      height: 500px;
+    }
+
+    &-info {
+      position: relative;
+      top: 0;
+      transform: translateY(0);
+      width: auto;
+      padding: 30px 0;
+      border-radius: 0;
+      text-align: center;
+
+      .section-title {
+        display: block;
+        margin-bottom: 20px !important;
+      }
+
+      &_block {
+        margin-bottom: 20px;
+
+        .info-block {
+          display: block;
+
+          &_img {
+            display: none;
+          }
+
+          &_text {
+
+            .text-title {
+              font-size: 17px;
+            }
+
+            .text-descrip {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer-block
+  .footer {
+
+    &-info {
+      padding: 20px 0;
+      font-size: 11px;
+
+      &_text {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  // Modals
+
+  .modals {
+
+    .popup {
+
+      &-header {
+        font-size: 17px;
+        line-height: 50px;
+      }
+
+      &-form {
+
+        &_title {
+          font-size: 20px;
+          line-height: 24px;
+          padding-top: 30px;
+          padding-bottom: 15px;
+          color: $color-main;
+
+          span {
+            display: block;
+            font-size: 16px;
+            color: $color-text_light;
+          }
+
+        }
+
+        .feedback-form {
+
+          label {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 10px;
+          }
+
+          .form-input {
+            margin-bottom: 15px;
+
+            input {
+              text-align: center;
+              font-size: 15px;
+              min-width: 280px;
+
+              &[type="number"] {
+                padding: 13px 30px 13px 18px;
+              }
+            }
+
+            .form-reset {
+              transform: translate(-22px, 5px);
+              font-size: 25px;
+            }
+          }
+        }
+
+        &_subtitle {
+          font-size: 12px;
+          padding-bottom: 30px;
+        }
+      }
+
+      &-descr {
+        display: block;
+        padding: 20px 10px 4px;
+
+        &_img {
+          margin-bottom: 20px;
+        }
+
+        &_text {
+          font-size: 14px;
+          margin-left: 0;
+        }
+      }
+
+      &-advantage {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0 10px;
+
+        &_block {
+          min-block-size: 100px;
+          flex-basis: 100%;
+          margin: 0 10px 10px;
+          padding: 15px;
+
+          .advantage-text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-call,
+  .modal-product,
+  .modal-calc {
+
+    .popup {
+      width: 300px;
+      margin-left: -150px;
+    }
+  }
+
+  .modal-calc {
+    .popup {
+
+      &-header {
+        line-height: 28px;
+        padding: 5px;
+      }
+
+      &-form {
+
+        &_title {
+          font-size: 17px;
+          line-height: 20px;
+        }
+
+        &_subtitle {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

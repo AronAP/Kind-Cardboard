@@ -18,6 +18,10 @@
     background-color: white;
     z-index: 2;
 
+    .section-title {
+      display: none;
+    }
+
     &_block {
       margin-bottom: 30px;
 

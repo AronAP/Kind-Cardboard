@@ -8,7 +8,7 @@
     }
   }
 
-  if (document.documentElement.clientWidth > 768) {
+  if (document.documentElement.clientWidth > 576 && document.documentElement.clientWidth <= 992) {
     function slowScroll(id) {
       var offset = 44;
       $('html, body').animate({
@@ -18,7 +18,7 @@
     }
   }
 
-  if (document.documentElement.clientWidth < 576) {
+  if (document.documentElement.clientWidth <= 576) {
     function slowScroll(id) {
       var offset = -1;
       $('html, body').animate({

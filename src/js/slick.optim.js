@@ -49,6 +49,16 @@ $(document).ready(function () {
     nextArrow: '<div class="reviews-arrow reviews-arrow_right"></div>',
     responsive: [
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+          draggable: true,
+          infinite: true,
+        }
+      },
+      {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,

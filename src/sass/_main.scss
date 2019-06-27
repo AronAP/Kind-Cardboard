@@ -38,9 +38,13 @@
     &::after {
       content: url(../img/main/label.png);
       position: absolute;
-      bottom: -15px;
+      bottom: 0;
       left: 100px;
       z-index: 1;
+    }
+
+    .slick-list {
+      min-height: 400px;
     }
 
     &_2 {
@@ -60,6 +64,7 @@
 
       &_subtitle {
         font-size: 28px;
+        margin-bottom: 20px;
       }
     }
 

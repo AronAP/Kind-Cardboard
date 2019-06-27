@@ -1,0 +1,13 @@
+{
+  "spellright.language": [
+    "en",
+    "ru",
+    "uk"
+  ],
+  "spellright.documentTypes": [
+    "plaintext",
+    "markdown",
+    "css",
+    "php"
+  ]
+}

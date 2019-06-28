@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/AronAP/Kind-Cardboard#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-ftp": "^1.1.0",
@@ -29,7 +29,7 @@
   "dependencies": {
     "check": "^1.0.0",
     "g": "^2.0.1",
-    "npm": "^6.4.1",
-    "updates": "^5.1.2"
+    "npm": "^6.9.1",
+    "updates": "^5.4.3"
   }
 }

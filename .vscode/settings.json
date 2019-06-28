@@ -7,7 +7,7 @@
   "spellright.documentTypes": [
     "plaintext",
     "markdown",
-    "css",
-    "php"
+    "php",
+    "javascript"
   ]
 }

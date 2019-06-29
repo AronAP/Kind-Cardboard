@@ -8,7 +8,7 @@ function initMap() {
       lng: 56.001940
     },
     popupContent = '<p class="content" style="font-size: 13px; text-align: center;"><span style="font-weight: 900;">Офис Доброго Картона</span><br>г. Уфа, Проспект октября, 46</p>',
-    myMarkerImg = 'img/contacts/Marker-Cardboard.png';
+    myMarkerImg = 'img/contacts/Marker-Cardboard.webp';
 
   if (window.innerWidth <= 768) {
     var myCoordinates = {

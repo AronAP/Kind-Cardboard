@@ -18,6 +18,13 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- [if IE]>
+  <style>
+      .form-reset {
+        display: none;
+      }
+  </style>
+  <![endif]-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/smoothScroll.js" defer></script>
@@ -149,12 +156,11 @@
               </div>
               <!-- /.form-text -->
               <form action="#" class="form-request">
-                <!-- <input type="text" placeholder="Введите номер телефона"> -->
                 <div class="form-input">
                   <input type="tel" class="phone" placeholder="Введите номер телефона">
                   <a href="javascript:void(0)" class="form-reset">&times;</a>
                 </div>
-                <button class="form-button_main button">
+                <button class="button form-button_main">
                   Оставить заявку!
                 </button>
               </form>

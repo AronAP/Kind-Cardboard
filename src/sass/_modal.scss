@@ -4,6 +4,7 @@
 
 .modals {
   display: none;
+  overflow-x: hidden;
 
   .overlay {
     position: fixed;
@@ -48,6 +49,7 @@
       text-transform: uppercase;
       text-align: center;
       background-color: $color-main;
+      margin-bottom: auto;
     }
 
     &-form {
@@ -115,6 +117,9 @@
           .form-reset {
             position: absolute;
             transform: translate(-22px, 1px);
+            -webkit-transform: translate(-22px, 3px);
+            -moz-transform: translate(-22px, 1px);
+            -ms-transform: translate(-22px, 1px);
             text-decoration: none;
             color: lighten($color-text_dark, 40%);
             font-size: 30px;

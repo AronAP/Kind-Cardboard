@@ -5,3 +5,9 @@ body {
 img {
   max-width: 100%;
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-reset {
+    display: none;
+  }
+}

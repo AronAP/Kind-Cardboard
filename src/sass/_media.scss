@@ -17,7 +17,8 @@
       }
 
       &::after {
-        bottom: 10px;
+        bottom: -35px;
+        left: 90px;
       }
 
       .slick-list {
@@ -59,15 +60,17 @@
         .form-request {
           margin-bottom: 5px;
 
-          input {
-            padding: 10px 7px;
-            font-size: 15px;
-            min-width: 259px;
-          }
+          .form-input {
 
-          .form-reset {
-            font-size: 25px;
-            transform: translate(-22px, 3px);
+            input {
+              padding: 10px 7px;
+              font-size: 15px;
+              min-width: 258px;
+            }
+
+            .form-reset {
+              transform: translateX(235px);
+            }
           }
         }
       }
@@ -196,20 +199,24 @@
           display: block;
           margin-bottom: 10px;
 
-          input {
-            text-align: center;
-            font-size: 15px;
-            min-width: 290px;
-            margin-bottom: 15px;
-          }
+          .form-input {
 
-          .form-reset {
-            transform: translate(-22px, 2px);
+            input {
+              text-align: center;
+              font-size: 15px;
+              min-width: 290px;
+            }
+
+            .form-reset {
+              font-size: 25px;
+              transform: translateX(269px);
+            }
           }
         }
 
         .form-button_main {
           margin-left: 0;
+          margin-top: 15px;
         }
 
         .form-text_small {
@@ -314,6 +321,9 @@
 
       .form-reset {
         transform: translate(-22px, 2px);
+        -webkit-transform: translate(-21px, 4px);
+        -moz-transform: translate(-22px, 2px);
+        -ms-transform: translate(-22px, 2px);
         font-size: 25px;
       }
     }
@@ -490,6 +500,9 @@
 
             .form-reset {
               transform: translate(-22px, 2px);
+              -webkit-transform: translate(-21px, 4px);
+              -moz-transform: translate(-22px, 2px);
+              -ms-transform: translate(-22px, 2px);
               font-size: 25px;
             }
           }
@@ -715,8 +728,13 @@
 
         .form-request {
 
-          .form-reset {
-            transform: translate(-22px, 4px);
+          .form-input {
+            justify-content: center;
+
+            .form-reset {
+              transform: translateX(130px);
+              font-size: 25px;
+            }
           }
         }
 
@@ -837,12 +855,12 @@
       }
 
       input {
-        min-width: 290px;
+        min-width: 285px;
         font-size: 15px;
       }
 
       .form-reset {
-        transform: translate(-22px, 4px);
+        transform: translate(-22px, 3px);
         font-size: 25px;
       }
     }
@@ -851,6 +869,7 @@
   // Production-block
   .production {
     padding: 0;
+    overflow: hidden;
 
     &-slider {
       margin-bottom: 50px;
@@ -902,8 +921,8 @@
       margin-left: 0;
 
       &_title {
-        margin-right: -4.5%;
-        margin-left: -4.5%;
+        margin-right: -100%;
+        margin-left: -100%;
         font-size: 20px;
         line-height: 18px;
         padding: 15px 0;
@@ -922,6 +941,7 @@
   // Storage-block
   .storage {
     padding: 0;
+    overflow: hidden;
 
     &-text {
       text-align: center;
@@ -929,8 +949,8 @@
       margin-right: 0;
 
       &_title {
-        margin-right: -4.5%;
-        margin-left: -4.5%;
+        margin-right: -100%;
+        margin-left: -100%;
         font-size: 20px;
         line-height: 18px;
         padding: 15px 0;
@@ -1080,7 +1100,7 @@
             input {
               text-align: center;
               font-size: 15px;
-              min-width: 280px;
+              min-width: 275px;
 
               &[type="number"] {
                 padding: 13px 30px 13px 18px;
@@ -1088,7 +1108,7 @@
             }
 
             .form-reset {
-              transform: translate(-22px, 5px);
+              transform: translate(-22px, 3px);
               font-size: 25px;
             }
           }

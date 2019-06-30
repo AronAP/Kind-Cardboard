@@ -31,5 +31,10 @@
     "g": "^2.0.1",
     "npm": "^6.9.1",
     "updates": "^5.4.3"
-  }
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "IE 8"
+  ]
 }

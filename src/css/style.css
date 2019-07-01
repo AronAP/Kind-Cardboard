@@ -46,6 +46,7 @@ img {
 
 .button img {
   vertical-align: middle;
+  margin-right: 5px;
 }
 
 .header-phone_button,
@@ -1666,6 +1667,10 @@ img {
 
   .title-phone_button {
     padding: 8px;
+  }
+
+  .title-phone_button img {
+    margin-right: 0;
   }
 
   .title-phone_number {

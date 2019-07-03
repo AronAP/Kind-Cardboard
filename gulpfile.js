@@ -20,7 +20,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task("reload-css", function() {
-  gulp.src('./src/sass/**/*.scss')
+  gulp.src('./src/sass/**/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 3 version'],
@@ -39,7 +39,7 @@ gulp.task("reload-css", function() {
 });
 
 gulp.task('ftp', function () {
-  return gulp.src('dist/**')
+  return gulp.src('src/**')
     .pipe(ftp({
       host: 's2.hostiman.ru',
       user: 'artempry',

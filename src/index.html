@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#ff9d00">
-  <link rel="icon" href="img/favicon.ico">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   <title>Добрый Картон</title>
 
@@ -107,7 +107,7 @@
     </div>
     <!-- /.container -->
   </div>
-  <!-- /.section -->
+  <!-- /.title -->
 
   <div class="main" id="main">
     <div class="container">
@@ -164,12 +164,12 @@
                 </span>
               </div>
               <!-- /.form-text -->
-              <form action="#" class="form-request">
+              <form action="telegram-call.php" method="POST" class="form-request">
                 <div class="form-input">
-                  <input type="tel" class="phone" placeholder="Введите номер телефона">
+                  <input type="tel" class="phone" name="user_phone" placeholder="Введите номер телефона">
                   <a href="javascript:void(0)" class="form-reset">&times;</a>
                 </div>
-                <button class="button form-button_main">
+                <button type="submit" class="button form-button_main">
                   Оставить заявку!
                 </button>
               </form>
@@ -559,19 +559,19 @@
         <!-- /.offer-text_subtitle -->
       </div>
       <!-- /.offer-text -->
-      <form action="#" class="offer-form">
+      <form action="telegram-call.php" method="POST" class="offer-form">
         <label for="name">Укажите ваше имя:</label>
         <div class="form-input">
-          <input type="text" id="name" placeholder="Как вас зовут?" maxlength="30" required>
+          <input type="text" id="name" name="user_name" placeholder="Как вас зовут?" maxlength="30" required>
           <a href="javascript:void(0)" class="form-reset">&times;</a>
         </div>
 
         <label for="offer-phone">Введите ваш номер телефона:</label>
         <div class="form-input">
-          <input type="tel" id="offer-phone" class="phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
+          <input type="tel" id="offer-phone" class="phone" name="user_phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
           <a href="javascript:void(0)" class="form-reset">&times;</a>
         </div>
-        <button class="button form-button_offer">Оставить заявку!</button>
+        <button type="submit" class="button form-button_offer">Оставить заявку!</button>
         <!-- /.button form-button_offer -->
       </form>
       <!-- /.offer-form -->
@@ -993,15 +993,15 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку
             изделий</span></div>
         <!-- /.popup-form_title -->
-        <form action="#" class="feedback-form">
+        <form action="telegram-call.php" method="POST" class="feedback-form">
           <label for="modal-call_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="modal-call_name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-call_name" name="user_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <label for="modal-call_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="modal-call_phone" class="phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-call_phone" class="phone" name="user_phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1123,15 +1123,15 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку
             изделий</span></div>
         <!-- /.popup-form_title -->
-        <form action="#" class="feedback-form">
+        <form action="telegram-call.php" method="POST" class="feedback-form">
           <label for="modal-product__first_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="modal-product__first_name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-product__first_name" name="user_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <label for="modal-product__first_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="modal-product__first_phone" class="phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-product__first_phone" class="phone" name="user_phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1252,15 +1252,15 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку
             изделий</span></div>
         <!-- /.popup-form_title -->
-        <form action="#" class="feedback-form">
+        <form action="telegram-call.php" method="POST" class="feedback-form">
           <label for="modal-product__second_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="modal-product__second_name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-product__second_name" name="user_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <label for="modal-product__second_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="modal-product__second_phone" class="phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-product__second_phone" class="phone" name="user_phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1381,15 +1381,15 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку
             изделий</span></div>
         <!-- /.popup-form_title -->
-        <form action="#" class="feedback-form">
+        <form action="telegram-call.php" method="POST" class="feedback-form">
           <label for="modal-productt__third_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="modal-productt__third_name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-productt__third_name" name="user_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <label for="modal-productt__third_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="modal-productt__third_phone" class="phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-productt__third_phone" class="phone" name="user_phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1507,15 +1507,15 @@
         <div class="popup-form_title">Получите индивидуальное предложение <span>на производство и поставку
             изделий</span></div>
         <!-- /.popup-form_title -->
-        <form action="#" class="feedback-form">
+        <form action="telegram-call.php" method="POST" class="feedback-form">
           <label for="modal-product__fourth_name">Укажите ваше имя:</label>
           <div class="form-input">
-            <input type="text" id="modal-product__fourth_name" placeholder="Как вас зовут?" maxlength="30" required>
+            <input type="text" id="modal-product__fourth_name" name="user_name" placeholder="Как вас зовут?" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <label for="modal-product__fourth_phone">Введите ваш номер телефона:</label>
           <div class="form-input">
-            <input type="tel" id="modal-product__fourth_phone" class="phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
+            <input type="tel" id="modal-product__fourth_phone" class="phone" name="user_phone" placeholder="+8 (ХХХ) ХХХ-ХХ-ХХ">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Оставить заявку!</button>
@@ -1542,29 +1542,29 @@
       <div class="popup-form">
         <div class="popup-form_title">Перезвоним в течение 5 минут</div>
         <!-- /.popup-form_title -->
-        <form action="#" class="feedback-form">
+        <form action="telegram-consult.php" method="POST" class="feedback-form">
           <div class="form-input">
-            <input type="text" placeholder="Ваше имя" maxlength="30" required>
+            <input type="text" name="user_name" placeholder="Ваше имя" maxlength="30" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <div class="form-input">
-            <input type="tel" class="phone" placeholder="Контактный телефон">
+            <input type="tel" class="phone" name="user_phone" placeholder="Контактный телефон">
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <div class="form-input">
-            <input type="number" placeholder="Длина изделия (м)" required>
+            <input type="number" name="product_length" placeholder="Длина изделия (м)" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <div class="form-input">
-            <input type="number" placeholder="Ширина изделия (м)" required>
+            <input type="number" name="product_width" placeholder="Ширина изделия (м)" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <div class="form-input">
-            <input type="number" placeholder="Высота изделия (м)" required>
+            <input type="number" name="product_height" placeholder="Высота изделия (м)" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <div class="form-input">
-            <input type="number" placeholder="Количество изделий (штук)" required>
+            <input type="number" name="product_number" placeholder="Количество изделий (штук)" required>
             <a href="javascript:void(0)" class="form-reset">&times;</a>
           </div>
           <button type="submit" class="form-button_modal button">Получить консультацию</button>

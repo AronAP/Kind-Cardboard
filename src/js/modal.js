@@ -45,7 +45,7 @@ $(document).ready(function () {
 
 
   // Mask
-  $('.phone').mask('+8 (999) 999-99-99');
+  $('.phone').mask('8(999)999-99-99');
 
 
   // Reset

@@ -39,12 +39,12 @@ gulp.task("reload-css", function() {
 });
 
 gulp.task('ftp', function () {
-  return gulp.src('src/**')
+  return gulp.src('dist/**')
     .pipe(ftp({
-      host: 's2.hostiman.ru',
-      user: 'artempry',
-      pass: 'ib786Yb4Cw',
-      remotePath: '/www/artemprydybailo.h1n.ru/KindCardboard'
+      host: '',
+      user: '',
+      pass: '',
+      remotePath: ''
     }))
     .pipe(gutil.noop());
 });

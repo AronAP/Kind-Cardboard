@@ -1,6 +1,17 @@
 <?php
 
-include ('variable-consult.php');
+/* https://api.telegram.org/bot881409762:AAFi4yWk4qvT1CDo1tJOA7XwlZ6igAEH6VY/getUpdates,
+где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
+
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
+$length = $_POST['product_length'];
+$width = $_POST['product_width'];
+$height = $_POST['product_height'];
+$number = $_POST['product_number'];
+$token = "881409762:AAFi4yWk4qvT1CDo1tJOA7XwlZ6igAEH6VY";
+$chat_id = "-1001187871232";
+$separator = "";
 
 if($phone == "") {
 	$phone = "НЕИЗВЕСТЕН";

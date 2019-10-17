@@ -1,6 +1,12 @@
 <?php
 
-include ('variable-call.php.php');
+/* https://api.telegram.org/bot881409762:AAFi4yWk4qvT1CDo1tJOA7XwlZ6igAEH6VY/getUpdates,
+где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
+
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
+$token = "881409762:AAFi4yWk4qvT1CDo1tJOA7XwlZ6igAEH6VY";
+$chat_id = "-1001187871232";
 
 if($name == "") {
 	$name = "НЕИЗВЕСТНО";

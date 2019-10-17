@@ -1,6 +1,6 @@
 <?php
 
-/* https://api.telegram.org/bot881409762:AAFN6EE9LjERffoYMZqQ2VwCcj8DJX8OByA/getUpdates,
+/* https://api.telegram.org/bot881409762:AAFi4yWk4qvT1CDo1tJOA7XwlZ6igAEH6VY/getUpdates,
 где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
 
 $name = $_POST['user_name'];
@@ -9,8 +9,8 @@ $length = $_POST['product_length'];
 $width = $_POST['product_width'];
 $height = $_POST['product_height'];
 $number = $_POST['product_number'];
-$token = "881409762:AAFN6EE9LjERffoYMZqQ2VwCcj8DJX8OByA";
-$chat_id = "-388235252";
+$token = "881409762:AAFi4yWk4qvT1CDo1tJOA7XwlZ6igAEH6VY";
+$chat_id = "-1001187871232";
 $separator = "";
 
 if($phone == "") {

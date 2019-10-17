@@ -16,6 +16,19 @@
   <link rel="stylesheet" href="css/roboto.min.css">
   <link rel="stylesheet" href="css/thank-you.min.css">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143071497-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143071497-1');
+  </script>
+
 </head>
 
 <body>
